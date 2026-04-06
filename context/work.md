@@ -1,6 +1,6 @@
 # Work & Business
 
-**Company:** Soho Companies Limited
+**Company:** Soho Companies LLC
 
 ## Brands
 

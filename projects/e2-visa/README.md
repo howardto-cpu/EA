@@ -1,6 +1,6 @@
 # E2 Visa Application
 
-US investor visa to enable Howard to operate Soho Companies Limited in Houston, TX.
+US investor visa to enable Howard to operate Soho Companies LLC in Houston, TX.
 
 **Status:** Active
 
