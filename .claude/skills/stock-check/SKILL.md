@@ -14,11 +14,13 @@ Run this skill every weekday at 4 PM EST (near market close).
 | ZWU.TO     | TSX      | BMO Covered Call Utilities ETF |
 | ZNQ.TO     | TSX      | BMO NASDAQ 100 CAD Hedged ETF |
 | ZWB.TO     | TSX      | BMO Covered Call Canadian Banks ETF |
-| ETHH.B.TO  | TSX      | CI Galaxy Ethereum ETF |
+| ETHH-B.TO  | TSX      | Purpose Ether CAD ETF Non-Currency Hedged |
 
 ## Steps
 
-1. For each ticker above, use WebSearch or WebFetch to look up the current quote. Search "[TICKER] stock price today" or fetch from a finance source (e.g., finance.yahoo.com/quote/[TICKER]).
+1. For each ticker above, fetch the current quote:
+   - **US tickers** (BRK.B, KWEB, NKE, IBIT, DTCR): use https://stockanalysis.com/stocks/[TICKER]/ or https://stockanalysis.com/etf/[TICKER]/
+   - **CAD tickers** (ZWU.TO, ZNQ.TO, ZWB.TO, ETHH-B.TO): use https://www.theglobeandmail.com/investing/markets/stocks/[TICKER without .TO, append -T]/ (e.g. ZWB.TO → ZWB-T, ZNQ.TO → ZNQ-T, ETHH-B.TO → ETHH-B-T)
 
 2. For each ticker, collect:
    - Current price (in the native currency — USD for US tickers, CAD for .TO tickers)
@@ -48,7 +50,7 @@ Run this skill every weekday at 4 PM EST (near market close).
 | ETHH.B.TO  | $xx.xx   | +x.xx%  | $xx.xx   | $xx.xx  |
 
 *USD tickers: BRK.B, KWEB, NKE, IBIT, DTCR*
-*CAD tickers: ZWU.TO, ZNQ.TO, ZWB.TO, ETHH.B.TO*
+*CAD tickers: ZWU.TO, ZNQ.TO, ZWB.TO, ETHH-B.TO*
 ```
 
 5. Confirm the file was saved successfully.
