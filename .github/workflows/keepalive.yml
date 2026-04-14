@@ -1,0 +1,22 @@
+name: Keepalive
+
+on:
+  schedule:
+    - cron: '0 12 * * 1-5'  # Every weekday at 8 AM EDT — runs before the 4 PM stock check
+
+jobs:
+  keepalive:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Commit timestamp to keep repo active
+        run: |
+          echo "$(date -u)" > .github/keepalive.txt
+          git config user.name "Keepalive Bot"
+          git config user.email "actions@github.com"
+          git add .github/keepalive.txt
+          git commit -m "Keepalive $(date +%Y-%m-%d)"
+          git push https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git
